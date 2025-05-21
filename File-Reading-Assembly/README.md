@@ -25,6 +25,10 @@ In c programming, you will notice the main function as two optional arguments
 ```c
 int main(int argc, char** argv){
     // code goes here
+      for(int i=0; i < argc; i++) {
+        printf("The argv[%d] = %s\n", i, argv[i]);
+    }
+
 }
 ```
 
@@ -36,8 +40,15 @@ int main(int argc, char** argv){
 
 ### Discussion
 * What is the first argument passed into the program?
+
+  * The first arg is always the program name
+
 * Why would having program arguments be useful for programs?
 
+  * Test modular code, one arg at a time, with print statments to show outputs line-by-line
+  * Create structure to follow, for setting up future code
+  * Can help reduce the amount of coding
+  * Increases fluidity, without having as much hard code
 
 ## Reading a File
 If you followed Mike Shaw's video, you will have a good idea of how to read a file. This follows a similar guideline. 
