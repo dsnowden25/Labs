@@ -14,9 +14,6 @@
     
 // }
 
-// ```c
-// FILE *input = fopen(argv[1],"r");
-// ```
 
 // ```c
 // char buff[BUFF_SIZE]; 
@@ -33,10 +30,21 @@
 // ```
 
 
+#define BUFF_SIZE 1024
+
 int main(int argc, char const *argv[])
 {
-    // Wite your code here to practice reading a file (name passed in via program args)    
-    // and contents printed to the screen as you read it. 
+char buff[BUFF_SIZE]; 
+
+FILE *input = fopen(argv[1],"r");
+char* line = malloc(BUFF_SIZE * sizeof(char));
+while (fgets(line, BUFF_SIZE, input) != NULL) {
+    // do the thing, line now has the line from input
+    
+}
+
+free(line); // don't forget to free memory!
+fclose(input); // don't forget to close a file!
     
     return 0;
 }
