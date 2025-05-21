@@ -78,7 +78,6 @@ FILE *input = fopen(argv[1],"r");
 
 int main(int argc, char const *argv[])
 {
-char buff[BUFF_SIZE]; 
 
 FILE *input = fopen(argv[1],"r");
 char* line = malloc(BUFF_SIZE * sizeof(char));

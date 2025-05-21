@@ -13,7 +13,7 @@ FILE *input = fopen(argv[1],"r");
 char* line = malloc(BUFF_SIZE * sizeof(char));
 while (fgets(line, BUFF_SIZE, input) != NULL) {
     // do the thing, line now has the line from input
-    printf("%s",line);
+    printf("%s\n",line);
 }
 
 free(line); // don't forget to free memory!
