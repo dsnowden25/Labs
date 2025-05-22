@@ -372,6 +372,10 @@ That is the letter O, not the number 0. This will compile the code with the high
 
 As per our standard end of the team activity - go to the Module 02 challenge problems, and as a group pick a couple to work on. Discuss your solutions. Include a solution in your team activity meeting files. You are also encouraged to take a technical interview question and discuss solutions as a group.  
 
+* Judson - "Hello World!" in C
+* Tor - Sum and difference
+* Umer - Two sum
+* Daymian - Squares of a sorted array
 
 ## 📚 Resources
 
