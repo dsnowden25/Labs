@@ -286,14 +286,51 @@ Go ahead and use [estimator.c] for your template. You will notice the skeleton i
 
 👉🏽 **Your Task**  Go ahead and finish the `run_program` function.
 
+```
+void run_program(char* file_name) {
+    // student TODO
+    int * counts = calloc(11, sizeof(int));
+    FILE *input = fopen(file_name,"r");
+    char* line = malloc(BUFF_SIZE * sizeof(char));
+    while (fgets(line, BUFF_SIZE, input) != NULL) {
+        convertToUpperCase(line);
+        for (int i = 0; i < 11; i++)
+        {
+            if (contains(line,instructions[i]))
+            {
+                counts[i]++;
+            }
+        }
+        // do the thing, line now has the line from input
+        // printf("%s",line);
+    }
+    
+    print_info(counts);
+    free(line); // don't forget to free memory!
+    free(counts);
+    fclose(input); // don't forget to close a file!
+}
+```
 
 ### Discussion
 * What were some challenges?
+  * understanding the multidimensional array and looping through correctly
+  * Reading in the files without defining them ahead of time (not sure why, my brain wants to see the name beforehand)
+  
+  
 * What do the cycles tell you about the difficulty of the process for the computer?
+  * It looks like some cycles are more expensive or difficult for the computer than others
+
 * Why does this/knowing assembly matter?
-  * This right here is the hard one. It can be difficult to see the forest through the trees, so discuss some reasons that come to mind and share them with the class at the end. 
+  * This right here is the hard one. It can be difficult to see the forest through the trees, so discuss some reasons that come to mind and share them with the class at the end.
+
+* Without understanding assembly, it is harder to optimize the run time of programs
+* Can be helpful with niche errors and debugging in general
+
 * If you have time, use the Godbolt tool (linked below) to try equivalent programs in various languages. 
   * How does python and c differ, even if it the code is "equivalent"?
+  
+* We did not have time for this exploration
 
 ## Diving Into Optimization
 
