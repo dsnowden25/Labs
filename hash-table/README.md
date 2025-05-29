@@ -1,9 +1,18 @@
 # Team Activity: Explore Hash Algorithms and Collisions  
 
-For this team activity, you will explore hashing algorithms and collisions. When working with Hashmaps,
+For this team activity, you will explore hashing algorithms and collisions. When working with Hash Tables,
 there will be collisions, but the depth of the lists (or even trees as you will explore in future weeks),
 is often very small. This is why even with large numbers, such as near a million items, you still get effectively
 $O(1)$ access time. 
+
+
+The goals for this  activity are as follows:
+* Write different hashing functions for hash tables
+* Better understand collision detection and load factors
+  
+  
+## :star: Working in Teams :star:
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments. 
 
 ## Review The Code
 
@@ -32,11 +41,11 @@ for (int i = 0; i < ALGO_SIZE; i++)
       collisions[i][loc]++;
 }
 ```
-This means that for every algorithm, call the hash, mod it by the `SIZE` of the 'hashmap' (really just an array in this case), and increment a counter to track the number of collisions that happen. Since the `collisions[i]` is initialized with 0, it will just continue to count up for everything a key wants to be stored in that position. 
+This means that for every algorithm, call the hash, mod it by the `SIZE` of the 'hash table' (really just an array in this case), and increment a counter to track the number of collisions that happen. Since the `collisions[i]` is initialized with 0, it will just continue to count up for everything a key wants to be stored in that position. 
 
 Then later in `void printCollisionsOnly(int *array, int size)` it prints out the stats of the collisions array for each algorithm in order. 
 
-This code is setup so you can get a better feel of how hashmaps work in practice, even if we are not storing the full key-value pairs. 
+This code is setup so you can get a better feel of how hash tables work in practice, even if we are not storing the full key-value pairs. 
 
 
 
@@ -47,7 +56,7 @@ There are a number of .txt files. If you open them you will find the files with 
 You should be able to run the code with:
 
 ```console
-> clang -Wall hash.test.c 
+> gcc -Wall hash.test.c 
 > ./a.out movie_ids_us_1000.txt
 ```
 
@@ -132,12 +141,12 @@ For example, take 5 in binary (101) and apply the operations to that small value
 
 ## Final Discussion
 
-You will never find a perfect hash, and there is often a cost of performance the more complicated your transformation. As such, those who define hashmaps are often searching for a "good enough" hash algorithm, and then they provide a way to let people change the default implementation so they can be more specific for their domain. 
+You will never find a perfect hash, and there is often a cost of performance the more complicated your transformation. As such, those who define hash tables are often searching for a "good enough" hash algorithm, and then they provide a way to let people change the default implementation so they can be more specific for their domain. 
 
 For object oriented languages such as Java, those are built into the objects themselves to determine their hash. 
 
 > Discussion: 
-> Discuss a hashmap design. See if you can explain to each other how it is designed, and why it is effectively $O(1)$.  
+> Discuss a hash table design. See if you can explain to each other how it is designed, and why it is effectively $O(1)$.  
 > Can you also generate a case where access/insert/delete are $O(n)$?
 
 ## Leet Code Practice

@@ -2,6 +2,14 @@
 
 In this team activity, we will explore the two most common ways to represent a graph: adjacency lists and adjacency matrices. We will also look at the pros and cons of each representation.
 
+
+The goals for this  activity are as follows:
+* Learn another way to implement Adj Lists and Matrices
+* Explore advantages and disadvantages of each type of structure  
+  
+## :star: Working in Teams :star:
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments. 
+
 ## Provided Files
 You will see there are a fair amount of provided files. This to help you see how to break up the files in a C program between headers and implementation files. You will also see that there are two different implementations of the graph data structure. One uses adjacency lists, and the other uses adjacency matrices. You will be implementing the functions in [converter.c](converter.c) to convert between the two representations.
 

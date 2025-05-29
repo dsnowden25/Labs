@@ -1,17 +1,22 @@
 # Team Learning Activity
 
-Whenever you need to quickly add and remove items, but those items are always in order - a Linked List is a good option for the data structure. In this Lab, we will explore a **Singly Linked List**. You will then use this linked list as the foundation for the stack in your homework. 
+Whenever you need to quickly add and remove items, but those items are always in order - a Linked List is a good option for the data structure. In this Lab, we will explore a **Singly Linked List**. You will then use this linked list as the foundation for your homework. 
 
 **Precondition**: Make sure to review the page on structs, iterators, linked lists, and nodes in Canvas if you haven't!
 
-## Team Activity
-For this team activity, you will meet as a group at the scheduled meeting in MS Teams. The notes you take as a team should be stored in the files section of that meeting, and while not required, it is recommended that you create a nice naming scheme for the TAs to see the notes. They will also have access to your chat logs in the team.  They will use the attendance record to award points. 
+The goals for this team activity are as follows:
+* Better understand linked list
+* Discuss the Big O complexity of linked list operations
+* Better understanding of structs and pointers
+
+## :star: Working in Teams :star:
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments. 
 
 
 
 ## Part 1: Picturing Linked Lists
 
-Given the following code, draw out the final memory structure similar to how you did in [Homework 02](https://github.com/CS5008-khoury-lionelle/hw02#linking-to-images).  You can draw with a program, or one person can draw (with direction from others) on paper and take a picture.
+Given the following code, draw out the final memory structure.  You can draw with a program, or one person can draw (with direction from others) on paper and take a picture.
 
 ```c
 typedef struct node
@@ -72,7 +77,7 @@ As a group, write a function the iterates over the list, and prints out the valu
 ```
 
 #### Test printing a list
-Using the main function in [main.c], go ahead and build a list by looping over the arrays. Then, print out the list.
+Using the main function in [main.c](main.c), go ahead and build a list by looping over the arrays. Then, print out the list.
 
 If you did it correctly, your print should look like
 ```text
