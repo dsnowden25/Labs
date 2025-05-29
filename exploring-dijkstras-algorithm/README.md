@@ -3,6 +3,14 @@
 
 In this team activity, you will explore Dijkstra's algorithm run time efficiency by comparing it against a version that uses a priority queue/heap, and a version that uses a list. You will also explore the effect of the graph density on the run time of Dijkstra's algorithm.
 
+
+The goals for this  activity are as follows:
+* Learn about Dijkstra's algorithm
+* Monitor the run time as the number of edges increase in the graph
+  
+## :star: Working in Teams :star:
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments. 
+
 ## Provided Files
 For this team activity, we have provided three python files. 
 * [graph.py](graph.py) - Contains the Graph class, which is used to represent a graph. 

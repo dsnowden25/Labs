@@ -1,6 +1,14 @@
-# Team Activity: Breadth First Search and Depth First Search on Trees
+# Lab: Breadth First Search and Depth First Search on Trees
 
-In this team activity you will explore using [Breadth First Search] and [Depth First Search] on a tree structure. 
+In this activity you will explore using [Breadth First Search] and [Depth First Search] on a tree structure. 
+
+The goals for this  activity are as follows:
+* Describe and understand BFS
+* Implement DFS in / pre / post order recursively
+  
+  
+## :star: Working in Teams :star:
+When working in teams, remember do not let one person do all the work. Make sure to work together, and ask questions. It is also better if different people program, and you all take turns programming for various team assignments. 
 
 
 ## Code Walkthrough
@@ -118,7 +126,7 @@ Also for the tree:
 In this team activity, we have learned about the different types of search algorithms, and how they can be used to traverse a tree. We have also learned about the different types of tree traversals, and how they can be used to print out the tree in different orders.
 
 We will come back to the traversal types when we explore graphs, which are a more complex data structure than trees but the fundamentals are the same. Searching is used throughout computer science, and knowing your data and which search is best
-often helps with the efficiency of your program. For a Binary Search Tree (your homework), that is almost exclusively depth first traversal of your code, as you always know "which direction" to traverse until you find the node you are looking for.
+often helps with the efficiency of your program. For a Binary Search Tree, that is almost exclusively depth first traversal of your code, as you always know "which direction" to traverse until you find the node you are looking for.
 
 ## Technical Interview Practice
 
