@@ -19,7 +19,29 @@
 //           be modified to store a sorted array of size.
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
-   // TODO implement
+    //first outer loop to go through array size number of times
+    for(unsigned int outer = 0; outer < size - 1; outer++) {
+      int swap_counter = 0;
+        //inner loop that should go through size-1 times since we compare the next value
+        for(unsigned int inner = 0; inner < size - 1; inner++) {
+            
+            //printf("Value of a = %d and b = %d before call to swap\n", *(array+inner),*(array+inner+1));
+            if(*(array+inner) > *(array+inner+1)) {
+                swap_counter++;
+                swap((array+inner),(array+inner+1));
+            }
+            //printf("Value of a = %d and b = %d after call to swap\n", *(array+inner),*(array+inner+1));
+        }
+
+        //print array after each outer pass
+        if(print) {
+          printf("Pass %u: ", outer + 1);
+          printIntArray(array, size);
+        }
+        if(swap_counter == 0) {
+          break;
+    }
+  }
 }
 
 // provided code 

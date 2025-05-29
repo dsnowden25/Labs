@@ -22,6 +22,17 @@ The idea behind a bubble sort is that you compare two side by side numbers, swap
 ### 👉🏽 **Task**  Practice
 With your group, take turns writing out 5 values, then write out what the array looks like after 1 complete pass. 
 
+Judson:
+54091 -> 45091 -> 40591 -> 40591 -> 40519
+
+Daymian:
+96024 -> 69024 -> 60924 -> 60294 -> 60249
+
+Tor: 8146 -> 1846 -> 1486 -> 1468
+
+Umer:
+47832 -> 47832 -> 47832 -> 47382 -> 47328
+
 For example:
 ```text
 4 2 1 3 5
@@ -81,7 +92,10 @@ To write the bubble sort, the first you need to do is write a 'swap' function.  
 ```c
 void swap(int *a, int *b)
 {
-    // TODO: Swap two integers in an array.
+    int *c = *a;
+    int *d = *b;
+    *a = d;
+    *b = c;
 }
 ```
 
@@ -98,11 +112,44 @@ While bubble sort is well documented you should try writing it, talking it throu
 As you write the bubble sort, make sure to comment on each line what it is doing and why. Bubble sore is well documented, so it is more important that you understand the why than coming up with a creative solution. 
 
 1. Bubble sort is $O(n^2)$. Looking at the algorithm can you explain to your group why that is?
+* There are two for-loops.
+
 2. Can you come up with an array that will generate the "worst case"? 
+* a worst case array is one sorted in reverse, because it maximizes the amount of the swap steps
 3. Can you come up with an array that will generate the "best case"?
    * By default, the best case is the same, but can you optimize it?
+    * Yes, we could make it so the sort function stops after all the values have been sorted.
    * Given the example above, optimize it so it stops running after the array is sorted? 
      * The optimized version is more common, and gives us the "best case".
+
+```c
+void bubbleSortIntegers(int *array, unsigned int size, int print)
+{
+    //first outer loop to go through array size number of times
+    for(unsigned int outer = 0; outer < size - 1; outer++) {
+      int swap_counter = 0;
+        //inner loop that should go through size-1 times since we compare the next value
+        for(unsigned int inner = 0; inner < size - 1; inner++) {
+            
+            //printf("Value of a = %d and b = %d before call to swap\n", *(array+inner),*(array+inner+1));
+            if(*(array+inner) > *(array+inner+1)) {
+                swap_counter++;
+                swap((array+inner),(array+inner+1));
+            }
+            //printf("Value of ag = %d and b = %d after call to swap\n", *(array+inner),*(array+inner+1));
+        }
+
+        //print array after each outer pass
+        if(print) {
+          printf("Pass %u: ", outer + 1);
+          printIntArray(array, size);
+        }
+        if(swap_counter == 0) {
+          break;
+    }
+  }
+}
+```
 
 
 ## Compare Sorts
@@ -110,12 +157,12 @@ Compare the bubble sort against the other sort provided in C using tester. Try i
 
 
 For example:
-| N | Bubble |  Quick |
-| :-- | :--: | :--: |
-| 10 | 0.05 | 0.001 |
-| 100 | 0.5 | 0.01 |
-| 1000 | 5 |  0.1 |
-| 5000 | ... | ... |
+| N    | Bubble   |  Quick    |
+| :--  | :--:     | :--:      |
+| 10   | 0.000000 | 0.0000001 |
+| 100  | 0.000005 | 0.000038  |
+| 1000 | 0.001526 | 0.000058  |
+| 5000 | 0.035931 | 0.000334  |
 
 We suggest you run it *without* print, as print will slow down the code. So for example, your run code would look like:
 
@@ -129,6 +176,8 @@ You will notice on larger numbers, the bubble starts to really slow down, while 
 ## Homework Prep
 With your group, talk about the differences between Insertion, Bubble, and Selection sorts. Try to work them out on paper first!
 
+*We found this neat reference for algorithms with some visualizations*: [Cool_reference]
+
 Work each one out on paper - similar to how you did for the 5 value array above for bubble sort. Make you use the [visualize] tool to better understand!
 
 > [!NOTE]
@@ -141,6 +190,18 @@ Work each one out on paper - similar to how you did for the 5 value array above 
 
 Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
 
+Discussion Question:
+* You are provided with a large data set of student grades for CS 5008. You want to sort the grades in ascending order. Which Quadratic Sort would you choose and why?
+After reviewing the options we feel that selection sort would probably be a good choice. Bubble sort could work too, but it could be potentially slower. We look forward to learning about more algorithims! 
+
+* Follow up, now that you've sorted the grades, you need to sort alphabetically while preserving the relative order of the sorted grades. Which sort would you use and why?
+Hmmm. Our first guess would be insertion sort, especially over bubble sort. Merge sort would be a good option as well, since it is fairly simple and is usually stable. Merge sort is often used to sort and merge subarrays, which is effectively what we do when sorting by alphabetical order. But even if we have a class size of 300, we don't have a huge data set and we are not sure that the choice of algorthim have a huge impact.
+
+Challenge Questions:
+Daymian: Sort Array by Increasing Frequency
+Judson: Sum and Difference of Two Numbers (HackerRank)
+Umer: Number of 1 bits
+Tor: 
 
 ## 📚 Resources
 * [Bubble Sort on Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
@@ -150,3 +211,4 @@ Lastly, work on leet code practice. Everyone pick a different problem, and take 
 
 [bubble]: https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif
 [visualize]: https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/
+[Cool_reference]: https://www.geeksforgeeks.org/introduction-to-sorting-algorithm/
