@@ -103,6 +103,13 @@ void merge(int arr[], int temp[], int l, int m, int r)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r)
 {
+     int m;
+    if(r > l) {
+        m = (l+r)/2;
+        merge_sort(arr, temp, l, m);
+        merge_sort(arr, temp, m+1, r);
+        merge(arr, temp, l, m, r);
+    }
    
 }
 
