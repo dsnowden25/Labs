@@ -84,17 +84,37 @@ void merge(int arr[], int temp[], int l, int m, int r)
         exit(1);
     }
 
-    if (l > m || m + 1 > r)
-        return;
+    int n1 = m - l + 1;
+    int n2 = r - m;
 
-    int i = l;
-    int j = m + 1;
-    int start = l;
+    int *L = temp;
+    int *R = temp + n1;
 
-    for (i = l; i <= r; i++)
-{
-   arr[i] = temp[i];
-}
+    memcpy(L, arr + l, sizeof(int) * n1);
+    memcpy(R, arr + m +1, sizeof(int) * n2);
+
+    int i = 0;
+    int j = 0;
+    int k = l;
+
+        while(i < n1 && j < n2){
+        if(L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        }else{
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+    while(i < n1) {
+        arr[k++] = L[i++];
+
+    }
+    while(j < n2) {
+        arr[k++] = R[j++];
+
+    }
 }
 
 // To be built during week 6 lab
@@ -106,16 +126,13 @@ void merge(int arr[], int temp[], int l, int m, int r)
 //          	This helps temporarily store the sorted subarray.
 //          (3) 'l' and 'r' are integers, which are the first index and the last index of 'arr' respectively.
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
-void merge_sort(int arr[], int temp[], int l, int r)
-{
-     int m;
-    if(r > l) {
-        m = (l+r)/2;
+void merge_sort(int arr[], int temp[], int l, int r) {
+    if(l < r) {
+        int m = l + (r - l) / 2;
         merge_sort(arr, temp, l, m);
         merge_sort(arr, temp, m+1, r);
         merge(arr, temp, l, m, r);
     }
-   
 }
 
 // lab build, merge sort
