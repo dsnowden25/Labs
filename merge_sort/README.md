@@ -46,6 +46,8 @@ mergeSort(arr[], temp[], l,  r):
 
 1. Given the pseudo code: is merge sort an [in-place algorithm]? Why or why not?
 
+We think that this qualifies as an in-place sort because at the end the result is copied back into the original array.
+
 
 ## MergeSort
 In sorts.h, find `merge_sort(int arr[], int temp[], int l, int r)`. This is your primary of two functions you will want to implement. 
