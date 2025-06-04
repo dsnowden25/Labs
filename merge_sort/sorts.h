@@ -77,41 +77,47 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
-void merge(int arr[], int temp[], int l, int m, int r)
-{
+void merge(int arr[], int temp[], int l, int m, int r) {
+    // Check for valid arrays
     if (arr == NULL || temp == NULL)
     {
-        exit(1);
+        exit(1); // Exit if invalid input
     }
 
-    int n1 = m - l + 1;
-    int n2 = r - m;
+    //finds size of split arrays
+    int n1 = m - l + 1; // Number of elements in left subarray
+    int n2 = r - m; // Number of elements in right subarray
 
-    int *L = temp;
-    int *R = temp + n1;
+    // Create pointers for the temp subarrays
+    int *L = temp; // left-side subarray (half of temp array)
+    int *R = temp + n1; // right-side subarray (half of temp array)
 
-    memcpy(L, arr + l, sizeof(int) * n1);
-    memcpy(R, arr + m +1, sizeof(int) * n2);
+    // Copy data from arr to temp subarrays
+    memcpy(L, arr + l, sizeof(int) * n1); // Copy left subarray into L
+    memcpy(R, arr + m +1, sizeof(int) * n2); // Copy left subarray into R
 
-    int i = 0;
+    //Start counters at 0, k at size of l
+    int i = 0; // i
     int j = 0;
     int k = l;
 
-        while(i < n1 && j < n2){
-        if(L[i] <= R[j]) {
-            arr[k] = L[i];
-            i++;
-        }else{
-            arr[k] = R[j];
-            j++;
-        }
-        k++;
+    //First while loop
+    while(i < n1 && j < n2) {
+    if(L[i] <= R[j]) {
+        arr[k] = L[i]; // if left is smaller
+        i++; // next element
+    }else{
+        arr[k] = R[j];// if right is smaller
+        j++;  // next element
     }
-    while(i < n1) {
+    k++; // move to next position in array
+    
+    }
+    while(i < n1) { // Copy remaining from L, if any
         arr[k++] = L[i++];
 
     }
-    while(j < n2) {
+    while(j < n2) { // Copy remaining from R, if any
         arr[k++] = R[j++];
 
     }
@@ -127,11 +133,11 @@ void merge(int arr[], int temp[], int l, int m, int r)
 //          (3) 'l' and 'r' are integers, which are the first index and the last index of 'arr' respectively.
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r) {
-    if(l < r) {
-        int m = l + (r - l) / 2;
-        merge_sort(arr, temp, l, m);
-        merge_sort(arr, temp, m+1, r);
-        merge(arr, temp, l, m, r);
+    if(l < r) { // Only sort if more than one
+        int m = l + (r - l) / 2; //find the middle
+        merge_sort(arr, temp, l, m); //merge sort left half
+        merge_sort(arr, temp, m+1, r); //merge sort right half
+        merge(arr, temp, l, m, r); //merge two arrays back together
     }
 }
 
@@ -139,15 +145,18 @@ void merge_sort(int arr[], int temp[], int l, int r) {
 
 void mergeSortIntegers(int *array, unsigned int size, int print)
 { // print is ignored for this one
-    if (array == NULL)
+    if (array == NULL) // Check for null array
     {
         exit(1);
     }
-    if (size <= 1)
+    if (size <= 1) // 
         return;
 
+    // Allocate temp array memory
     int *temp = (int *)malloc(sizeof(int) * size);
+    // Runs the recursive merge sort on the array
     merge_sort(array, temp, 0, size - 1);
+    // Free temp memory allocation
     free(temp);
 }
 
