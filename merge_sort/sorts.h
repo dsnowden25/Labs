@@ -90,6 +90,11 @@ void merge(int arr[], int temp[], int l, int m, int r)
     int i = l;
     int j = m + 1;
     int start = l;
+
+    for (i = l; i <= r; i++)
+{
+   arr[i] = temp[i];
+}
 }
 
 // To be built during week 6 lab
