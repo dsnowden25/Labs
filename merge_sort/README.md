@@ -127,17 +127,41 @@ Work together with your partners to build the merge function. While the code is 
 ## Other Sorts?
 Take time to search additional sorts online (there are a *ton* of them). Each person should find a sort, and describe to the group what situations it is best used for. Even better if you can find a visualization for that sort. 
 
+* Daymian: Tim Sort is a hybrid algorithim, relying on insertion sort and merge sort mainly. Tim sort reduces the number of comparisons in sorting by identifying "runs", or series of already consectutive ordered elements existing in the dataset. Since most real-world data contain such runs, we don't need to make as many comparisons and our runtime is reduced. "In the worst case, Timsort takes O(n log n) comparisons to sort an array of n elements. In the best case, which occurs when the input is already sorted, it runs in linear time, meaning that it is an adaptive sorting algorithm [1]." You can view a visualization here [2]!.
+
+* Umer - Heap Sort first builds a binary tree and than recursively work on smaller binary tree to bring the largest number to the top of the tree. [3]
+
+* Judson: Pigeonhole Sort is a sorting algorithm that is best for sorting lists of elements where the number of elements and the number of possible key values are approximately the same. 
+References: [4]
+
+* Tor: Bucket Sort - Bucket sort is a sorting technique that involves dividing elements into various groups, or buckets. These buckets are formed by uniformly distributing the elements. Once the elements are divided into buckets, they can be sorted using any other sorting algorithm. Finally, the sorted elements are gathered together in an ordered fashion. [5]
 
 ## Technical Interview Practice
 
-Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group. 
+Lastly, work on leet code practice. Everyone pick a different problem, and take turns explaining your solution *as* you work through the code (as time allows). This is called "live coding" and often required in technical interviews. Moving forward, we would like you to emphasize the explaining of code as you work through it, to better prepare you for technical interviews. You should also discuss one of the technical interview questions as a group.
+
+*Technical Question: When would you use recursion versus when would you not use recursion?*
+Non-recursive functions are good for simple iterative processes. However, they can be performance heavy and lead to stack overflow issues. Recursive functions are good for repetitions and math-heavy sequences, like divide and conquer algorithms and factorials. Personally, I choose to write non-recursive functions whenever possible.
+
+* Daymian: Number of 1 Bits
+
+* Tor: Valid Parentheses
+
+* Umer: Power of Two
+
+* Judson: Remove Duplicates from Sort Array
 
 ## 📚 Resources
 * [Merge Sort on Khan](https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/divide-and-conquer-algorithms)
 * [Merge Sort Video](https://www.youtube.com/watch?time_continue=1&v=JSceec-wEyw)
 
 
-
+## References
+[1]: Wikipedia contributors. 2024. Timsort. Wikipedia, The Free Encyclopedia. Retrieved June 4, 2025 from https://en.wikipedia.org/wiki/Timsort
+[2]: Laux, Chris. Timsort. Chris Laux Blog. Retrieved June 4, 2025 from https://www.chrislaux.com/timsort
+[3]: https://sortvisualizer.com/heapsort/
+[4]: https://www.geeksforgeeks.org/pigeonhole-sort/
+[5]: https://www.geeksforgeeks.org/bucket-sort-2/
 [Merge Sort]: mergesort.svg
 [divide and conquer algorithm]: https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm
 [John von Neumann]: https://en.wikipedia.org/wiki/John_von_Neumann
