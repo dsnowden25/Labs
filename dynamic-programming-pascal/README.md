@@ -28,6 +28,10 @@ When working in teams, remember do not let one person do all the work. Make sure
 
 As a team, **find three to four algorithms** that use dynamic programming. You do not need to implement them, or even fully understand them, but you should work together to understand how dynamic programming is being used to help with the algorithm. 
 
+1) Longest increasing subsequence tabulation algorithm
+2) Knapsack problem tabulation algorithm
+3) Floyd-Warshall Algorthim - used in weighted graphs to find all the pairs of vertices shortest paths. Does not work for graphs with negative cycles though!
+
 Now that you are thinking about what is dynamic programming, it is time to work together on a sample problem.
 
 
