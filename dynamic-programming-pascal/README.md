@@ -161,6 +161,7 @@ Review the script and make sure everyone in the team activity fully understands 
 👉🏽 **Task**: Use either the provided CSV data, or data you generate to build a line graph comparing the various speeds (note you  may need to build separate line graphs for a better comparison). Discuss with your team. 
 
 
+
 ## Thinking Deeper
 These are not the most efficient implementations! If you have time, study different ways you can improve the implementation of pascals triangle. 
 
@@ -168,6 +169,16 @@ These are not the most efficient implementations! If you have time, study differ
 ## Technical Interview Practice
 Take time practicing some of the past modules challenge problems. While you may not have time for everyone to do this, have a couple people practice "live coding". Live coding is a skill in interviews were you are asked to describe code **while** you are writing it. It can be a challenging skill, and it takes practice. I recommend that you setup a rotation of people to practice this skill within your team, ideally a couple every week. The other teams members can offer support, and then do a code review after a solution is generated. Then, as a group work a technical interview problem to discuss possible solutions.
 
+ * Daymian - Get Maximum in Generated Array
+ * Judson - Counting Bits
+ * Umer - Best Time to Buy and Sell Stock
+ * Tor -  Fibonacci Number
+
+Technical Interview Question: Dynamic Programming solves a common recursive issue of repeated calculations. So, when would we want to use recursion instead of Dynamic Programming?
+
+ * Recursion can be useful if we are running functions that don't require us to complete all the subparts. For example, if we are doing graph traversal and we are looking for a specific node.
+ * If you had very limited memory, like extremely limited memory.
+ * In games (game theory)! For example, in a board "game", there are states that we will never reach.
 
 ## 📚 Resources
 * [Geek for Geeks Pascal Triangle](https://www.geeksforgeeks.org/pascal-triangle/)
