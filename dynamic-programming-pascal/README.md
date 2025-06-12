@@ -132,6 +132,8 @@ Both will run relatively quickly, but if you increase your number to ~35, you wi
 
 Take a moment to discuss and describe dynamic programming in your own words to your team.  What are some things you are going to need to write a dynamic version of pascal's triangle. 
 
+* `if (n == i || i == 0) return 1;` = Base case: edges of Pascal's Triangle
+
 1. Make sure you declare a multidimensional array. As a static array using MAX as the size.
 2. Then for each value of  `[n][k]` store that answer in the table, if it isn't already in the table.   
    Hint: since Pascal's triangle always has positive values 1 or higher, you can do the following for a check
