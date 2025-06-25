@@ -58,7 +58,15 @@ void add_back(NeuList *list, int wins, int year) {
 
 void print_list(NeuList *list)
 {
-    // todo
+    Pair *current = list->head;
+    while (current != NULL) {
+        printf("Year: %d, Wins: %d", current->year, current->num_wins);
+        if (current->next != NULL) {
+            printf(" -> ");
+        }
+        current = current->next;
+    }
+    printf("\n");
 }
 
 Pair *find(NeuList *list, int year)
