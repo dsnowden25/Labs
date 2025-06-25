@@ -70,10 +70,17 @@ void print_list(NeuList *list)
 }
 
 Pair *find(NeuList *list, int year)
-{
-    // todo
-    return NULL;
-}
+// {
+    
+    // Pair *current = list->head;
+    // while (current != NULL) {
+        // if (current->year == year) {
+        //    return current;
+        // }
+        // current = current->next;
+    // }
+    // return NULL;
+// }
 
 
 void free_list(NeuList *list)
