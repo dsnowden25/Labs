@@ -69,7 +69,7 @@ void print_list(NeuList *list)
     printf("\n");
 }
 
-Pair *find(NeuList *list, int year)
+// Pair *find(NeuList *list, int year)
 // {
     
     // Pair *current = list->head;
@@ -80,6 +80,7 @@ Pair *find(NeuList *list, int year)
         // current = current->next;
     // }
     // return NULL;
+// }
 // }
 
 

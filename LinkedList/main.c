@@ -3,8 +3,7 @@
 
 #include "linkedlist.h"
 
-int main()
-{
+int main() {
     int test_years[5] = {2018, 2017, 2016, 2015, 2014};
     int test_wins[5] = {108, 93, 93, 78, 71};
 
