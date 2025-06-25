@@ -48,6 +48,10 @@ int main() {
    return 0;
 }
 
+```
+
+
+
 
 In addition the the memory diagram you draw, a way you can show a linked list is the following:
 
@@ -82,6 +86,12 @@ Create newNode with next pointing to list->head.
 
 Example: `Pair *newNode = new_node(5,2004,list->head)`
 
+```c
+newNode->num_wins = 5;
+newNode->year = 2004;
+newNode->next = list->head; // which currently points to [10, 2005]
+```
+
 ```mermaid
 graph LR
     HEAD --> A[10, 2005]
@@ -93,7 +103,10 @@ graph LR
 ```
  
 #### Push Front Step 2
-Move list->head to point to entry and increment list size. Example: list->head = entry; list->size++;
+Move list->head to point to entry and increment list size.
+
+Example: `list->head = entry; list->size++;`
+
 ```mermaid
 graph LR
     HEAD --> E[5, 2004] --> A
