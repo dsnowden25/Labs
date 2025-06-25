@@ -60,7 +60,7 @@ void print_list(NeuList *list)
 {
     Pair *current = list->head;
     while (current != NULL) {
-        printf("(%d, %d)", current->nums_wins, current->year);
+        printf("(%d, %d)", current->num_wins, current->year);
         if (current->next != NULL) {
             printf(" -> ");
         }
