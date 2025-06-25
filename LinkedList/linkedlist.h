@@ -60,7 +60,7 @@ void print_list(NeuList *list)
 {
     Pair *current = list->head;
     while (current != NULL) {
-        printf("(%d, %d)", current->year, current->num_wins);
+        printf("(%d, %d)", current->nums_wins, current->year);
         if (current->next != NULL) {
             printf(" -> ");
         }
@@ -69,19 +69,18 @@ void print_list(NeuList *list)
     printf("\n");
 }
 
-// Pair *find(NeuList *list, int year)
-// {
-    
-    // Pair *current = list->head;
-    // while (current != NULL) {
-        // if (current->year == year) {
-        //    return current;
-        // }
-        // current = current->next;
-    // }
-    // return NULL;
-// }
-// }
+Pair *find(NeuList *list, int year)
+{
+    Pair *current = list->head;
+    while (current != NULL) {
+        if (current->year == year) {
+            return current;
+        }
+        current = current->next;
+    }
+    return NULL;
+}
+
 
 
 void free_list(NeuList *list)

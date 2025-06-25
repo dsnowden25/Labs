@@ -32,7 +32,11 @@ int main() {
         add_back(list, test_wins[i], test_years[i]);
     }
     
-    
+    /*
+    ```text
+    (10, 2005) -> (20, 2006) -> (30, 2007) -> (40, 2008) 
+    ```
+    */
     // print the list out to make sure it's correct using your print list function you wrote in linkedlist.h
 
     printf("List contents:\n");

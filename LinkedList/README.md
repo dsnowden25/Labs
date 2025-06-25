@@ -50,9 +50,6 @@ int main() {
 
 ```
 
-
-
-
 In addition the the memory diagram you draw, a way you can show a linked list is the following:
 
 ```mermaid
