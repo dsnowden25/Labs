@@ -68,6 +68,28 @@ Take a look at [linkedlist.h](linkedlist.h). Describe what you see and notice. P
 #### Drawing Push Front
 Using a similar drawing to the list above, draw out what happens when you call `push_front`. The important part is to help understand the order of the code, and what happens to the pointers.
 
+#### Push Front Step 1
+Create newNode with next pointing to list->head.  Example: Pair *newNode = new_node(5,2009,list->head)
+```mermaid
+graph LR
+    HEAD --> A[10, 2005]
+    E[5, 2009] --> A
+    A[10, 2005] --> B[20, 2006]
+    B --> C[30, 2007]
+    C --> D[40, 2008]
+    D --> NULL
+```
+ 
+#### Push Front Step 2
+Move list->head to point to entry and increment list size. Example: list->head = entry; list->size++;
+```mermaid
+graph LR
+    HEAD --> E[5, 2009] --> A
+    A[10, 2005] --> B[20, 2006]
+    B --> C[30, 2007]
+    C --> D[40, 2008]
+    D --> NULL
+```
 
 ### Iterating over a Linked List
 As a group, write a function the iterates over the list, and prints out the values. The above list would look like the following:
