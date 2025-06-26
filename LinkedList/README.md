@@ -142,15 +142,67 @@ So far, the program has a major error. The memory is not being freed! Write a fu
 
 As a group, discuss how you would insert and remove an item in the middle of the list. Draw out how that would look with pointers.  
 
+#### Insert Step 1
+Use find function to get the location where to insert the new entry. Example: Pair *entry = fin(list->head, 2007)
+```mermaid
+graph LR
+    HEAD --> E[5, 2009] --> A
+    A[10, 2005] --> B[20, 2006]
+    B --> C[30, 2007]
+    C --> D[40, 2008]
+    D --> NULL
+    F --> C
+```
+ 
+#### Insert Step 2
+Create newNode that needs to be inserted using new_node fucntion and next pointing to found entry->next.  Example: Pair *newNode = new_node(35,2010,entry->next)
+```mermaid
+graph LR
+    HEAD --> E[5, 2009] --> A
+    A[10, 2005] --> B[20, 2006]
+    B --> C[30, 2007]
+    C --> D[40, 2008]
+    D --> NULL
+    F --> C
+    G[35, 2010] --> D
+```
+ 
+#### Insert Step 3
+Move pointer of entry->list->head to point to entry and increment list size. Example: list->head = entry; list->size++;
+```mermaid
+graph LR
+    HEAD --> E[5, 2009] --> A
+    A[10, 2005] --> B[20, 2006]
+    B --> C[30, 2007]
+    D --> NULL
+    F --> C
+    G[35, 2010] --> D
+    C --> G
+ 
+```
+
+* We would use our find function to look for the insertion, and create a node. There would be pointers...
+* To insert, adjust the `next` pointer of the previous node.
+* To remove, re-link the previous node to skip over the current node and then `free()` the removed node.
+* For sake of time, we moved to answer part 2
 
 ## Part 2: Stack and Queue
 
-Reviewing back to your CS 5001 class, you learned briefly about stacks and queues. Take a moment to discuss the differences, and then describe how a linked list could be used for either. Is it better for a stack or a queue? Why? This may involve some research, but why would you want to use a linked list over an array for a stack or queue? (and vise versa). 
+Reviewing back to your CS 5001 class, you learned briefly about stacks and queues. Take a moment to discuss the differences, and then describe how a linked list could be used for either. Is it better for a stack or a queue? Why? This may involve some research, but why would you want to use a linked list over an array for a stack or queue? (and vise versa).
+
+* The stack uses LIFO rules - last in, first out
+* The queue uses FIFO rules - firsrt in, first out
+* You would want to use a linked list over an array for a stack because the operations will happen at the head of the list. If you use a queue, it might be better to use a double linked list because there would be front (head) and read (end) pointers.
+* Linked lists use sequential data organization
+* Use an array when you need fast access by index or the size is fixed or changes infrequently.
+* An array can use either the stack or the queue, and it would depend on size limitations and access speed.
 
 
 ## Technical Interview Practice
 
 Take time practicing some of the past modules challenge problems. While you may not have time for everyone to do this, have a couple people practice "live coding". Live coding is a skill in interviews were you are asked to describe code **while** you are writing it. It can be a challenging skill, and it takes practice. I recommend that you setup a rotation of people to practice this skill within your team, ideally a couple every week. The other teams members can offer support, and then do a code review after a solution is generated. Then, as a group work a technical interview problem to discuss possible solutions.
+
+* We had time for discussion, but not to take notes on everything.
 
 ## 📝 Grading Rubric
 

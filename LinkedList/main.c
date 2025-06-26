@@ -56,10 +56,12 @@ int main() {
 
     //Step 5: Test the free function
     free_list(list);
-
+    // list == NULL;
+    printf("List Free! YAY\n");
     // Step 6: Print new list to confirm it's empty
-    printf("List after freeing:\n");
-    print_list(list);
-    
+    // printf("List after freeing:\n");
+    // if (list != NULL print_list(list));
+    // JUST KIDDING
+
     return 0;
 }
