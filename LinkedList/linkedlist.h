@@ -85,7 +85,13 @@ Pair *find(NeuList *list, int year)
 
 void free_list(NeuList *list)
 {
-    // todo
+    Pair *current = list->head;
+    while (current != NULL) {
+        Pair *next = current->next;
+        free(current);
+        current = next;
+    }
+    free(list);
 }
 
 #endif //LINKED_LIST_H

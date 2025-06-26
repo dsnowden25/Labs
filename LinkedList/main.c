@@ -54,6 +54,12 @@ int main() {
         printf("Not found\n"); 
     }
 
+    //Step 5: Test the free function
+    free_list(list);
+
+    // Step 6: Print new list to confirm it's empty
+    printf("List after freeing:\n");
+    print_list(list);
     
     return 0;
 }
