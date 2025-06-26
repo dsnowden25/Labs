@@ -37,10 +37,26 @@ int main() {
     (10, 2005) -> (20, 2006) -> (30, 2007) -> (40, 2008) 
     ```
     */
+
     // print the list out to make sure it's correct using your print list function you wrote in linkedlist.h
 
+    // Step 3: Print the list
     printf("List contents:\n");
     print_list(list);
 
+    // Step 4: Test find function
+    
+    
+    
+    int year_to_find = 2016;
+    Pair *found = find(list, year_to_find);
+    if (found-> num_wins == 78) {
+        printf("Found: (%d, %d)\n", found->num_wins, found->year);
+    }
+    else {
+        printf("Not found\n"); 
+    }
+
+    
     return 0;
 }
