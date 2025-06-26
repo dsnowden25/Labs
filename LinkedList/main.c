@@ -44,13 +44,10 @@ int main() {
     printf("List contents:\n");
     print_list(list);
 
-    // Step 4: Test find function
-    
-    
-    
+    // Step 4: Test find function    
     int year_to_find = 2016;
     Pair *found = find(list, year_to_find);
-    if (found-> num_wins == 78) {
+    if (found-> num_wins == 93) {
         printf("Found: (%d, %d)\n", found->num_wins, found->year);
     }
     else {
