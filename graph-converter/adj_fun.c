@@ -48,7 +48,7 @@ AdjMatrix * buildRandomMatrix(int size, int type) {
 
 int main(int argc, char** argv) {
  
-    AdjMatrix * matrix = buildRandomMatrix(5, UNDIRECTED);
+    AdjMatrix * matrix = buildRandomMatrix(5, DIRECTED_UNBALANCED);
 
     print_matrix(matrix);
 

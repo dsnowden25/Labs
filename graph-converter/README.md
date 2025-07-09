@@ -18,6 +18,9 @@ You will see there are a fair amount of provided files. This to help you see how
 
 Before you work on that, review the provided code and explain to each other the various lines. This is called a **CODE WALK** and is often a skill asked in technical interviews.  Make sure you understand how the code works, and that you can explain it to your teammates. 
 
+We did this!^
+*And asked each other questions, which sometimes led to more questions.*
+
 At this point, you can run `make` which will build the program. You can then run `./adj_fun.out` to run the program. You will see it will print out the graph as an adjacency matrix. 
 
 Now, draw the graph on a piece of paper. 
