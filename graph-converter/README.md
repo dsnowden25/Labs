@@ -63,6 +63,30 @@ flowchart TD
 
 👉🏽 **Task** 👈🏽: Modify the code in [adj_fun.c](adj_fun.c) to print out the graph as an adjacency matrix using `DIRECTED_ONE_DIRECTION`, `DIRECTED_UNBALANCED`, and `UNDIRECTED`. You can do this by changing the `type` variable in the `main` function. 
 
+Undirected
+Adjacency Matrix:
+* 0 6 6 9 2 
+* 6 0 4 6 5 
+* 6 4 0 8 7 
+* 9 6 8 0 2 
+* 2 5 7 2 0 
+
+Directed One Direction
+Adjacency Matrix:
+* 0 1 5 9 3 
+* 0 0 0 0 1 
+* 0 0 0 1 8 
+* 0 0 0 0 9 
+* 0 0 0 0 0 
+
+Directed Unbalanced
+Adjacency Matrix:
+* 0 1 9 8 6 
+* 0 0 9 1 9 
+* 6 4 0 1 7 
+* 7 5 3 0 0 
+* 6 2 4 4 0 
+
 **FOR EACH** of the types, draw the graph on a piece of paper. Talk it through with your group.
 
 

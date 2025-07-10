@@ -54,8 +54,12 @@ int main(int argc, char** argv) {
 
     AdjList * list = convert_matrix_to_list(matrix);
     print_graph(list);
-    free_graph(list);
+    AdjMatrix * matrix_2 = convert_list_to_matrix(list);
+    print_matrix(matrix_2);
 
+    free_graph(list);
     free_matrix(matrix);
+    free_matrix(matrix_2);
+    
  return 0;
 }
