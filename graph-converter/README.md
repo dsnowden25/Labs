@@ -105,11 +105,23 @@ Run the program and see if the matrix matches the list. You may need to draw out
 With your group, discuss the following
 
 1. What are the pros and cons of each representation?
+   * Adjacency List
+      * Pros: Better for sparse graphs 
+      * Cons: Poor access time due to nature of linked lists
+   * Adjacency Matrix
+      * Pros: Very fast - $O(1)$
+      * Cons: Use more memory, especially sparse graphs
 2. What is the space complexity of each representation?
+   * Adjacency List: $O(V + E)$
+   * Adjacenyc Matrix: $O(V^2)$
+
 3. What about time complexity of accessing a specific edge?
    * Give examples of when you would use each representation.
-4. When would you want to (or not use) each?
+   * Adjacency List: $O$(degree of vertex) - must traverse the list for that vertex.
+   * Adjacency Matrix: $O(1)$ - direct access via indices.
 
+4. When would you want to (or not use) each?
+   * Network router table uses list
 
 ## Technical Interview Practice
 
