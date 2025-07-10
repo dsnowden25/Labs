@@ -3,13 +3,6 @@
 AdjMatrix * convert_list_to_matrix(AdjList * list) {
     AdjMatrix * matrix = blank_matrix(list->size); // Create a blank adjacency matrix with the same size as the adjacency list
     
-    // Initialize all cells in the adjacency matrix to 0.
-    for (int i = 0; i < matrix->size; i++) {
-        for (int j = 0; j < matrix->size; j++) {
-            matrix->data[i][j] = 0;
-        }
-    }
-
     // For each vertex in the adjacency list,
     // we will iterate through its edges and populate the corresponding cells in the adjacency matrix with the edge weights.
     for (int i = 0; i < list->size; i++) {
