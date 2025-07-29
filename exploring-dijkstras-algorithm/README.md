@@ -22,7 +22,11 @@ For this team activity, we have provided three python files.
 
 1. Read through the code in the provided files. Explain the various lines to each other.
    * What is a major difference between the shortest_path functions?
+   The second shortest_path function that uses a list seems like it would take longer because of the more complicated loop structure.
+
    * Why would this matter? (We will continue to explore this throughout the team activity)
+   Run time is extremely important in creating efficient and useful programs (algorithms).
+
 2. In graph.py, we are creating  a small and medium graph. Take a moment and draw on the paper the visualization of the graph that those represent. 
 
 
@@ -83,8 +87,15 @@ Build a table based on the timings for both run_timed_test, both with a mostly c
 ### Discussion  
 
 * Take a moment to discuss the differences in speeds, what are some major points of difference between the different implementations of Dijkstra's algorithm? 
-* Did the differences go away (mostly) in a certain situation? 
-  * If so, what triggered that (think in respect to edges)?
+The heap function goes faster than the list function implementation. This is especially noticeable in our tests with larger, sparser graphs (N > 10000).
+
+    * 
+
+* Did the differences go away (mostly) in a certain situation?
+More complicated (denser) graphs seemed to show a less notable difference between the implementations.
+
+* If so, what triggered that (think in respect to edges)?
+Having less edges in the same size graph shows a bigger difference in runtimes between the implementations.
 
 
 ## Research
@@ -94,6 +105,10 @@ Build a table based on the timings for both run_timed_test, both with a mostly c
 Research the time and space complexity of Dijkstra's algorithm. Between the two different implementations presented, what is the time and space complexity of each?
 
 * In regards to time/space complexity, how did the total number of edges affect the run time of the algorithm?
+
+The heap function has a time complexity of $O((V + E) log V)$, or $O(E log V)$, where V is vertice number and E is edge number. The list based implementation has a time complexity of $O(V^2)$.
+
+When V is equal to E, this is a sparse graph. When E is equal to $V^2$, we have a denser graph. Technically, the list approach should be better for dense graphs, but their actual runtimes are similar (at least based on our results). For sparse graphs, heap should always be much faster.
 
 ## Technical Interview Practice
 
